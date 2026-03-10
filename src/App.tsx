@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-brand-green rounded overflow-hidden flex items-center justify-center shadow-lg border border-white/10">
-              <img src="/defender-logo.png" alt="Defender Logo" className="w-full h-full object-contain p-0.5" />
+              <img src="/defender-logo.png" alt="Defender Logo" className="w-[80%] h-[80%] object-contain" />
             </div>
             <span className="text-white font-bold text-3xl tracking-tighter uppercase">Defender</span>
           </div>
@@ -218,8 +218,8 @@ const About = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-12 -left-12 bg-brand-green p-2 rounded-3xl hidden md:block shadow-2xl border border-white/10">
-              <img src="/defender-logo.png" alt="Defender Logo" className="w-40 h-40 object-contain" />
+            <div className="absolute -bottom-12 -left-12 bg-brand-green rounded-3xl hidden md:block shadow-2xl border border-white/10 w-44 h-44 flex items-center justify-center">
+              <img src="/defender-logo.png" alt="Defender Logo" className="w-[80%] h-[80%] object-contain" />
             </div>
           </motion.div>
         </div>
