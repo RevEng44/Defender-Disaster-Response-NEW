@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-brand-green rounded overflow-hidden flex items-center justify-center">
-              <img src="https://picsum.photos/seed/defender-logo/100/100" alt="Defender Logo" className="w-full h-full object-contain p-1" />
+              <img src="/defender-logo.png" alt="Defender Logo" className="w-full h-full object-contain p-1" />
             </div>
             <span className="text-white font-bold text-xl tracking-tighter uppercase">Defender</span>
           </div>
@@ -118,10 +118,10 @@ const Hero = () => {
             playsInline 
             className="w-full h-full object-cover opacity-60"
           >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-flood-water-flowing-through-a-street-4424-large.mp4" type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
             {/* Fallback image if video fails */}
             <img 
-              src="https://picsum.photos/seed/flood-hero/1920/1080" 
+              src="/hero-flood.jpg"
               alt="Flood background" 
               className="w-full h-full object-cover"
             />
@@ -212,14 +212,14 @@ const About = () => {
           >
             <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <img 
-                src="https://picsum.photos/seed/flood-barrier/800/800" 
+                src="/flood-barrier-installation.JPG"
                 alt="Flood barrier installation" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -bottom-8 -left-8 bg-brand-green p-6 rounded-xl hidden md:block shadow-2xl">
-              <img src="https://picsum.photos/seed/defender-logo/100/100" alt="Defender Logo" className="w-16 h-16 object-contain" />
+              <img src="/defender-logo.png" alt="Defender Logo" className="w-16 h-16 object-contain" />
             </div>
           </motion.div>
         </div>
@@ -645,7 +645,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-            <img src="https://picsum.photos/seed/defender-logo/100/100" alt="Defender Logo" className="w-8 h-8 object-contain" />
+            <img src="/defender-logo.png" alt="Defender Logo" className="w-8 h-8 object-contain" />
             <span className="text-black font-bold text-lg tracking-tighter uppercase">Defender Disaster Response</span>
           </div>
           <div className="text-zinc-900 text-xs uppercase tracking-widest font-bold">
