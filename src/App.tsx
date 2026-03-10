@@ -43,11 +43,11 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-brand-green rounded overflow-hidden flex items-center justify-center">
-              <img src="/defender-logo.png" alt="Defender Logo" className="w-full h-full object-contain p-1" />
+          <div className="flex items-center gap-3">
+            <div className="w-14 h-14 bg-brand-green rounded overflow-hidden flex items-center justify-center shadow-lg border border-white/10">
+              <img src="/defender-logo.png" alt="Defender Logo" className="w-full h-full object-contain p-1.5" />
             </div>
-            <span className="text-white font-bold text-xl tracking-tighter uppercase">Defender</span>
+            <span className="text-white font-bold text-2xl tracking-tighter uppercase">Defender</span>
           </div>
           
           {/* Desktop Nav */}
@@ -121,7 +121,7 @@ const Hero = () => {
             <source src="/hero-video.mp4" type="video/mp4" />
             {/* Fallback image if video fails */}
             <img 
-              src="/hero-flood.jpg"
+              src="/hero-flood.jpg" 
               alt="Flood background" 
               className="w-full h-full object-cover"
             />
@@ -212,14 +212,14 @@ const About = () => {
           >
             <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <img 
-                src="/flood-barrier-installation.JPG"
+                src="/flood-barrier-installation.JPG" 
                 alt="Flood barrier installation" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 bg-brand-green p-6 rounded-xl hidden md:block shadow-2xl">
-              <img src="/defender-logo.png" alt="Defender Logo" className="w-16 h-16 object-contain" />
+            <div className="absolute -bottom-10 -left-10 bg-brand-green p-8 rounded-2xl hidden md:block shadow-2xl border border-white/10">
+              <img src="/defender-logo.png" alt="Defender Logo" className="w-24 h-24 object-contain" />
             </div>
           </motion.div>
         </div>
