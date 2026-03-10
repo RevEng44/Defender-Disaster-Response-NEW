@@ -43,11 +43,11 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-brand-green rounded overflow-hidden flex items-center justify-center">
-              <img src="https://picsum.photos/seed/defender-logo/100/100" alt="Defender Logo" className="w-full h-full object-contain p-1" />
+          <div className="flex items-center gap-3">
+            <div className="w-14 h-14 bg-brand-green rounded overflow-hidden flex items-center justify-center">
+              <img src="https://picsum.photos/seed/defender-logo/100/100" alt="Defender Logo" className="w-full h-full object-contain p-1.5" />
             </div>
-            <span className="text-white font-bold text-xl tracking-tighter uppercase">Defender</span>
+            <span className="text-white font-bold text-2xl tracking-tighter uppercase">Defender</span>
           </div>
           
           {/* Desktop Nav */}
@@ -218,8 +218,8 @@ const About = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 bg-brand-green p-6 rounded-xl hidden md:block shadow-2xl">
-              <img src="https://picsum.photos/seed/defender-logo/100/100" alt="Defender Logo" className="w-16 h-16 object-contain" />
+            <div className="absolute -bottom-10 -left-10 bg-brand-green p-8 rounded-2xl hidden md:block shadow-2xl border-4 border-black">
+              <img src="https://picsum.photos/seed/defender-logo/100/100" alt="Defender Logo" className="w-24 h-24 object-contain" />
             </div>
           </motion.div>
         </div>
