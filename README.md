@@ -1,20 +1,61 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Defender Disaster Response
 
-# Run and deploy your AI Studio app
+Professional flood mitigation and disaster response services website.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/34b5f216-e887-4e6c-a09c-6f09f4b70554
+- **Responsive Design**: Fully responsive layout for mobile, tablet, and desktop.
+- **Modern UI**: Built with React, Tailwind CSS, and Motion for smooth animations.
+- **Case Studies**: Detailed project highlights and case studies.
+- **Service Portfolio**: Comprehensive overview of services and products.
+- **Contact & Careers**: Integrated forms for inquiries and job applications.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: Motion (formerly Framer Motion)
+- **Icons**: Lucide React
+- **Build Tool**: Vite
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd defender-disaster-response
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Environment Variables
+
+Create a `.env` file in the root directory based on `.env.example`:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+## License
+
+This project is licensed under the Apache-2.0 License.
