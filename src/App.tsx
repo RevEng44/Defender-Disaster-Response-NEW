@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'motion/react';
 import { 
   Shield, 
   Waves, 
@@ -28,6 +28,68 @@ import {
 // Primary: #000000 (Black)
 // Accent: #5d7f3a (Brand Green)
 // Secondary: #cbd5e1 (Slate/Silver)
+
+const RisingWater = () => {
+  const { scrollYProgress } = useScroll();
+
+  // Smooth out the scroll progress for a more "fluid" feel
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  // Water rises from bottom (100%) to near top (15%) as user scrolls
+  const waterY = useTransform(smoothProgress, [0, 1], ['100%', '15%']);
+
+  // Transition from a translucent brand green to a deep, dark murky green
+  const waterBg = useTransform(
+    smoothProgress,
+    [0, 1],
+    ['rgba(93, 127, 58, 0.15)', 'rgba(15, 25, 10, 0.98)']
+  );
+
+  // Waves also darken and change color as the water rises to match the surface
+  const waveFill = useTransform(
+    smoothProgress,
+    [0, 1],
+    ['rgba(93, 127, 58, 0.4)', 'rgba(15, 25, 10, 1)']
+  );
+  const waveOpacity = useTransform(smoothProgress, [0, 1], [0.4, 1]);
+
+  return (
+    <motion.div
+      style={{ y: waterY, backgroundColor: waterBg }}
+      className="fixed inset-0 z-0 pointer-events-none backdrop-blur-[1px]"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20">
+        {/* Wave Layers - Overlapping by 2px to ensure a seamless connection */}
+        <motion.div
+          style={{ opacity: waveOpacity }}
+          className="absolute top-0 left-0 w-[200%] h-32 -translate-y-[calc(100%-2px)]"
+        >
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full animate-wave-slow">
+            <motion.path
+              style={{ fill: waveFill }}
+              d="M0,120V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z"
+            />
+          </svg>
+        </motion.div>
+        <motion.div
+          style={{ opacity: waveOpacity }}
+          className="absolute top-0 left-[-50%] w-[200%] h-24 -translate-y-[calc(100%-2px)]"
+        >
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full animate-wave-fast">
+            <motion.path
+              style={{ fill: waveFill }}
+              d="M0,120V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z"
+            />
+          </svg>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -663,9 +725,10 @@ const Footer = () => {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black font-sans selection:bg-brand-green selection:text-black">
+    <div className="min-h-screen bg-linear-to-b from-zinc-800 to-black font-sans selection:bg-brand-green selection:text-black">
+      <RisingWater />
       <Navbar />
-      <main className="bg-linear-to-b from-black via-zinc-900 to-zinc-600">
+      <main className="relative">
         <Hero />
         <About />
         <Services />
