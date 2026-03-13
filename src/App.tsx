@@ -105,11 +105,9 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-brand-green rounded overflow-hidden flex items-center justify-center shadow-lg border border-white/10">
-              <img src="/defender-logo.png" alt="Defender Logo" className="w-[85%] h-[85%] object-contain" />
-            </div>
-            <span className="text-white font-bold text-3xl tracking-tighter uppercase">Defender</span>
+          <div className="flex items-center gap-3">
+            <img src="/defender-logo.png" alt="Defender Logo" className="w-14 h-14 object-contain" />
+            <span className="text-white font-bold text-lg md:text-xl tracking-tight uppercase leading-tight">Defender<br className="hidden sm:block" /> <span className="text-brand-green">Disaster Response</span></span>
           </div>
           
           {/* Desktop Nav */}
@@ -198,11 +196,12 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block px-4 py-1 mb-6 border border-brand-green/50 text-brand-green text-xs font-bold tracking-[0.3em] uppercase rounded-full bg-brand-green/10">
-            Professional Disaster Response
+            Emergency Disaster Response
           </span>
           <h1 className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase leading-[0.9]">
             Protecting <br />
-            <span className="text-brand-green">Communities</span>
+            <span className="text-brand-green italic font-serif">What Matters</span> <br />
+            Most
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
             Defender Disaster Response Ltd. provides world-class flood mitigation, water diversion, and environmental protection services across North America.
@@ -241,7 +240,7 @@ const About = () => {
               Pre-Planned Prevention is the <span className="italic font-serif">Key to Resilience</span>
             </h3>
             <p className="text-slate-400 mb-6 text-lg leading-relaxed">
-              Defender Disaster Response Ltd. provides comprehensive flood mitigation, water diversion, and environmental protection services, delivering engineered solutions to safeguard communities, agencies, and corporations from the devastating impacts of water-related disasters. With over 8 years of experience, our team is dedicated to educating, informing, and protecting the public through innovative technology and rapid response capabilities.
+              Defender Disaster Response Ltd. is a true one-stop shop for flood mitigation, water diversion, and environmental protection. We don't just supply the products — we provide all necessary equipment and execute every aspect of the work ourselves, from engineered property assessments through full-scale deployment. With over 8 years of experience safeguarding communities, government agencies, and corporations, our team delivers end-to-end solutions backed by innovative technology and rapid response capabilities.
             </p>
             <div className="grid grid-cols-2 gap-8 mb-8">
               <div>
@@ -346,8 +345,9 @@ const Services = () => {
     { name: 'Eco-Dam', type: 'Water-filled bladder (PVC)', height: "2' – 8'", best: 'Large area coverage, low-flow / standing water, rapid deployment via Hydra spooler' },
     { name: 'Muscle Wall', type: 'Interlocking hard plastic, water-filled', height: "2' – 8'", best: 'Turbulent water, debris-heavy conditions; creates impenetrable wall with geotextile liner' },
     { name: 'Rapid H2O', type: 'Compact barrier system', height: "Up to 3'", best: 'Tight spaces, rapid setup; hurricane-tested' },
-    { name: 'Boxwall', type: 'Lightweight lock-together panels', height: 'Modular step-up', best: 'Non-turbulent water; no liner required; ground-seal system' },
+    { name: 'RFX', type: 'Lightweight lock-together panels', height: "Up to 3'", best: 'Non-turbulent water; no liner required; ground-seal system' },
     { name: 'Acquastop', type: 'Engineered aluminum systems', height: 'Custom', best: 'Permanent door, window, and entryway protection for buildings' },
+    { name: 'FloodMatik', type: 'Self-rising flood barrier', height: "Up to 2.5'", best: 'Unattended properties; self-activates when water rises' },
   ];
 
   return (
