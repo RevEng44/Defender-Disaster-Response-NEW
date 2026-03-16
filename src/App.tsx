@@ -21,7 +21,8 @@ import {
   CheckCircle2,
   AlertTriangle,
   HardHat,
-  Briefcase
+  Briefcase,
+  Handshake
 } from 'lucide-react';
 
 // Color Palette based on Logo:
@@ -158,6 +159,13 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-4 text-base font-bold text-brand-green"
+              >
+                Contact
+              </a>
             </div>
           </motion.div>
         )}
@@ -242,6 +250,15 @@ const About = () => {
             <p className="text-slate-400 mb-6 text-lg leading-relaxed">
               Defender Disaster Response Ltd. is a true one-stop shop for flood mitigation, water diversion, and environmental protection. We don't just supply the products — we provide all necessary equipment and execute every aspect of the work ourselves, from engineered property assessments through full-scale deployment. With over 8 years of experience safeguarding communities, government agencies, and corporations, our team delivers end-to-end solutions backed by innovative technology and rapid response capabilities.
             </p>
+            <div className="bg-brand-green/10 border border-brand-green/30 rounded-xl p-5 mb-6">
+              <p className="text-brand-green font-semibold text-base mb-2 flex items-center gap-2">
+                <Shield className="w-5 h-5" />
+                Don't Wait for the Emergency — Prepare in the Dry Season
+              </p>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                The best time to protect your community is before disaster strikes. Engage Defender during the dry season to design and build your custom flood defence package — so when the water rises, you're already protected. Proactive planning means faster deployment, lower costs, and complete peace of mind.
+              </p>
+            </div>
             <div className="grid grid-cols-2 gap-8 mb-8">
               <div>
                 <h4 className="text-3xl font-bold text-white mb-1">8+</h4>
@@ -316,6 +333,55 @@ const About = () => {
             ))}
           </div>
         </div>
+
+        {/* Indigenous Engagement */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32"
+        >
+          <h3 className="text-center text-3xl font-bold mb-4 uppercase tracking-widest">Indigenous Engagement</h3>
+          <p className="text-center text-slate-400 max-w-3xl mx-auto mb-12">
+            Defender is committed to meaningful collaboration with Indigenous Nations across Canada, building lasting partnerships rooted in respect, shared planning, and mutual benefit.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                icon: Shield,
+                title: "Early Engagement & Planning",
+                text: "Defender focuses on early engagement with Nations in flood-prone areas — working together during the dry season to build preparedness before emergencies arise."
+              },
+              {
+                icon: Handshake,
+                title: "Long-Term Partnerships",
+                text: "Lasting partnerships with Indigenous Nations are a key pillar of Defender's business, including employment opportunities for Nation members and inclusion of Indigenous-owned businesses where possible."
+              },
+              {
+                icon: Users,
+                title: "Community-Led Response Plans",
+                text: "Defender works directly with Nations to develop emergency response plans, ensuring the safety of homes, infrastructure, and community members."
+              },
+              {
+                icon: CheckCircle2,
+                title: "Commitment to Collaboration",
+                text: "Every engagement is built on a foundation of trust, transparency, and a shared goal of protecting communities and the land they steward."
+              }
+            ].map((item) => (
+              <div key={item.title} className="bg-zinc-900/80 border border-white/10 p-6 rounded-2xl hover:border-brand-green/50 transition-all group shadow-xl">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-brand-green/20 rounded-full flex items-center justify-center shrink-0 group-hover:bg-brand-green transition-colors">
+                    <item.icon className="text-brand-green group-hover:text-black w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+                    <p className="text-slate-400 text-sm leading-relaxed">{item.text}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -325,11 +391,11 @@ const Services = () => {
   const serviceCapabilities = [
     {
       title: 'Emergency Flood Defence',
-      desc: 'When permanent defences are overwhelmed, Defender deploys temporary systems to limit damage. Equipment is stockpiled centrally and mobilized within hours to address surface runoff, river flooding, storm surge, and erosion.'
+      desc: 'When permanent defences such as levees, dikes, or seawalls are overwhelmed or absent, Defender deploys temporary systems to limit damage. Equipment is stockpiled centrally and mobilized within hours to address surface runoff, river flooding, storm surge, and erosion.'
     },
     {
       title: 'Temporary Flood Walls',
-      desc: 'A practical alternative to costly permanent installations, offering 75–90% water-tight protection. Rapidly deployed and removed without a trace, ideal for critical infrastructure, commercial buildings, and transit systems.'
+      desc: 'Engineered flood barrier systems deployed rapidly before a flood event and removed cleanly once the danger has passed. Ideal for critical infrastructure, commercial buildings, and transit systems.'
     },
     {
       title: 'Water Management for Construction',
@@ -378,7 +444,7 @@ const Services = () => {
           </div>
 
           <div className="overflow-x-auto border border-white/10 rounded-xl bg-zinc-900/30 backdrop-blur-sm">
-            <table className="w-full text-left border-collapse">
+            <table className="w-full text-left border-collapse min-w-[600px]">
               <thead>
                 <tr className="bg-brand-green text-black uppercase text-xs font-black tracking-widest">
                   <th className="p-4 border-r border-black/10">Product</th>
@@ -402,7 +468,7 @@ const Services = () => {
         </div>
 
         {/* Deployment Process */}
-        <div className="mt-32 p-12 bg-brand-green rounded-3xl text-black">
+        <div className="mt-32 p-6 md:p-12 bg-brand-green rounded-3xl text-black">
           <h3 className="text-3xl font-black mb-4 uppercase text-center">The Defender Flood Kit System</h3>
           <p className="text-center font-bold mb-12 max-w-3xl mx-auto opacity-80">
             A comprehensive, turnkey solution designed for rapid response and long-term resilience.
@@ -467,7 +533,7 @@ const Projects = () => {
     },
     {
       title: "Construction Site Dewatering",
-      location: "Red Deer, Alberta",
+      location: "Edmonton, Alberta",
       year: "2018",
       client: "Construction — concrete outcropping installation",
       challenge: "The work area required continuous dewatering over a 30-day period to enable a concrete outcropping installation project.",
@@ -657,7 +723,7 @@ const Contact = () => {
                 <MapPin className="w-6 h-6 shrink-0" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest opacity-60">Headquarters</p>
-                  <p className="text-xl font-black">Red Deer, Alberta</p>
+                  <p className="text-xl font-black">Edmonton, Alberta</p>
                   <p className="text-sm opacity-80">Serving all of North America</p>
                 </div>
               </div>
@@ -717,6 +783,9 @@ const Footer = () => {
             <a href="#" className="text-zinc-900 hover:text-black transition-colors"><Mail className="w-5 h-5" /></a>
             <a href="#" className="text-zinc-900 hover:text-black transition-colors"><Phone className="w-5 h-5" /></a>
           </div>
+        </div>
+        <div className="mt-8 pt-6 border-t border-zinc-500/50 text-center">
+          <p className="text-zinc-800 text-xs tracking-wider">Website designed by <span className="font-bold">NEOS Advisors Ltd.</span></p>
         </div>
       </div>
     </footer>
