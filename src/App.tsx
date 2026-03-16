@@ -769,23 +769,19 @@ const Contact = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-600 border-t border-white/10 py-12">
+    <footer className="bg-zinc-900 border-t border-white/10 py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
             <img src="/defender-logo.png" alt="Defender Logo" className="w-8 h-8 object-contain" />
-            <span className="text-black font-bold text-lg tracking-tighter uppercase">Defender Disaster Response</span>
+            <span className="text-white font-bold text-lg tracking-tighter uppercase">Defender Disaster Response</span>
           </div>
-          <div className="text-zinc-900 text-xs uppercase tracking-widest font-bold">
+          <div className="text-slate-400 text-xs uppercase tracking-widest font-bold">
             © {new Date().getFullYear()} Defender Disaster Response Ltd. All rights reserved.
           </div>
-          <div className="flex gap-6">
-            <a href="#" className="text-zinc-900 hover:text-black transition-colors"><Mail className="w-5 h-5" /></a>
-            <a href="#" className="text-zinc-900 hover:text-black transition-colors"><Phone className="w-5 h-5" /></a>
-          </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-zinc-500/50 text-center">
-          <p className="text-zinc-800 text-xs tracking-wider">Website designed by <span className="font-bold">NEOS Advisors Ltd.</span></p>
+        <div className="mt-8 pt-6 border-t border-white/10 text-center">
+          <p className="text-slate-500 text-xs tracking-wider">Website designed by <span className="font-bold">NEOS Advisors Ltd.</span></p>
         </div>
       </div>
     </footer>
