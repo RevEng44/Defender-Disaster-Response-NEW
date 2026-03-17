@@ -108,7 +108,7 @@ const Navbar = () => {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-3">
             <img src="/defender-logo.png" alt="Defender Logo" className="w-14 h-14 object-contain" />
-            <span className="text-white font-bold text-lg md:text-xl tracking-tight uppercase leading-tight">Defender<br className="hidden sm:block" /> <span className="text-brand-green">Disaster Response</span></span>
+            <span className="text-white font-bold text-lg tracking-tighter uppercase">Defender Disaster Response</span>
           </div>
           
           {/* Desktop Nav */}
@@ -203,9 +203,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-1 mb-6 border border-brand-green/50 text-brand-green text-xs font-bold tracking-[0.3em] uppercase rounded-full bg-brand-green/10">
-            Emergency Disaster Response
-          </span>
           <h1 className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase leading-[0.9]">
             Protecting <br />
             <span className="text-brand-green italic font-serif">What Matters</span> <br />
@@ -256,7 +253,7 @@ const About = () => {
                 Don't Wait for the Emergency — Prepare in the Dry Season
               </p>
               <p className="text-slate-300 text-sm leading-relaxed">
-                The best time to protect your community is before disaster strikes. Engage Defender during the dry season to design and build your custom flood defence package — so when the water rises, you're already protected. Proactive planning means faster deployment, lower costs, and complete peace of mind.
+                The best time to protect your community is before disaster strikes. Engage Defender during the dry season to design and build your custom flood defence package so when the water rises, you're already protected. Proactive planning means faster deployment, lower costs, and complete peace of mind.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-8 mb-8">
@@ -350,7 +347,7 @@ const About = () => {
               {
                 icon: Shield,
                 title: "Early Engagement & Planning",
-                text: "Defender focuses on early engagement with Nations in flood-prone areas — working together during the dry season to build preparedness before emergencies arise."
+                text: "Defender focuses on early engagement with Nations in flood-prone areas by working together during the dry season to build preparedness before emergencies arise."
               },
               {
                 icon: Handshake,
@@ -781,7 +778,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-white/10 text-center">
-          <p className="text-slate-500 text-xs tracking-wider">Website designed by <span className="font-bold">NEOS Advisors Ltd.</span></p>
+          <p className="text-slate-500 text-xs tracking-wider">Website designed by <a href="https://neosadvisors.com/" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-brand-green transition-colors">NEOS Advisors Ltd.</a></p>
         </div>
       </div>
     </footer>

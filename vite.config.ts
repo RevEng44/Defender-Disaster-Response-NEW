@@ -15,6 +15,7 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    cacheDir: path.resolve(process.env.LOCALAPPDATA || 'C:/Users/Lauren/AppData/Local', 'vite-cache/defender-site'),
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
