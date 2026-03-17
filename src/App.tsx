@@ -245,7 +245,7 @@ const About = () => {
               Pre-Planned Prevention is the <span className="italic font-serif">Key to Resilience</span>
             </h3>
             <p className="text-slate-400 mb-6 text-lg leading-relaxed">
-              Defender Disaster Response Ltd. is a true one-stop shop for flood mitigation, water diversion, and environmental protection. We don't just supply the products — we provide all necessary equipment and execute every aspect of the work ourselves, from engineered property assessments through full-scale deployment. With over 8 years of experience safeguarding communities, government agencies, and corporations, our team delivers end-to-end solutions backed by innovative technology and rapid response capabilities.
+              Defender Disaster Response Ltd. is a true one-stop shop for flood mitigation, water diversion, and environmental protection. We don't just supply the products, we provide all necessary equipment and execute every aspect of the work ourselves, from engineered property assessments through full-scale deployment. With over 8 years of experience safeguarding communities, government agencies, and corporations, our team delivers end-to-end solutions backed by innovative technology and rapid response capabilities.
             </p>
             <div className="bg-brand-green/10 border border-brand-green/30 rounded-xl p-5 mb-6">
               <p className="text-brand-green font-semibold text-base mb-2 flex items-center gap-2">
